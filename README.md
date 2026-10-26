@@ -22,6 +22,12 @@ CI on the harness runs ruff, pytest on Python 3.11 and 3.12, and a prompt audit 
 
 ---
 
+### Classical ML
+
+[**fda-guidance-ml**](https://github.com/cstebs/fda-guidance-ml) [![CI](https://github.com/cstebs/fda-guidance-ml/actions/workflows/ci.yml/badge.svg)](https://github.com/cstebs/fda-guidance-ml/actions/workflows/ci.yml): classification, regression and clustering on the titles of all 2,787 FDA guidance documents, built with scikit-learn and PyTorch and shipped as a CLI and a Docker image with a drift check. Predicts the issuing FDA center at 0.852 macro-F1 (majority baseline 0.059) and the issue year within 6.9 years on average (mean-year baseline 10.2). TF-IDF with logistic regression beat sentence embeddings and a neural network, the same exact-term lesson the RAG harness found with BM25.
+
+---
+
 ### Shipped products
 
 - [**OpenCar**](https://github.com/cstebs/opencar): a free, self-hosted in-car dashboard for the Tesla browser. It runs on a Cloudflare Worker with KV and D1, and uses the Tesla Fleet API through OAuth. An adaptive poller has a hard cost ceiling written into the code and makes zero API calls while the car is parked.
@@ -29,4 +35,4 @@ CI on the harness runs ruff, pytest on Python 3.11 and 3.12, and a prompt audit 
 
 ---
 
-**Stack:** Python · TypeScript/JavaScript · Swift · SQL · LangGraph · Anthropic and OpenAI APIs · MCP · BM25 / dense / hybrid retrieval · pandas · Docker · Cloudflare Workers · AWS Lambda · GitHub Actions
+**Stack:** Python · TypeScript/JavaScript · Swift · SQL · LangGraph · Anthropic and OpenAI APIs · MCP · BM25 / dense / hybrid retrieval · scikit-learn · PyTorch · pandas · Docker · Cloudflare Workers · AWS Lambda · GitHub Actions
